@@ -1,4 +1,4 @@
-const pathtree = require('./pathtree')
+const pathtree = require('./logtree')
 const test = {
     "name": 1,
     "items": [
