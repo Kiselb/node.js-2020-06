@@ -1,0 +1,23 @@
+{
+  "name": "node.js-2020-06",
+  "version": "1.0.0",
+  "description": "Home Works",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kiselb/node.js-2020-06.git"
+  },
+  "keywords": [
+    "otus",
+    "node"
+  ],
+  "author": "Mikhail V. Kiselev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kiselb/node.js-2020-06/issues"
+  },
+  "homepage": "https://github.com/Kiselb/node.js-2020-06#readme"
+}
