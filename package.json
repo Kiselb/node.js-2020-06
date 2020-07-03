@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Kiselb/node.js-2020-06/issues"
   },
-  "homepage": "https://github.com/Kiselb/node.js-2020-06#readme"
+  "homepage": "https://github.com/Kiselb/node.js-2020-06#readme",
+  "dependencies": {
+    "yargs": "^15.4.0"
+  }
 }

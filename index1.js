@@ -1,4 +1,5 @@
-const pathtree = require('./logtree')
+const logtree = require('./logtree');
+
 const test = {
     "name": 1,
     "items": [
@@ -26,9 +27,6 @@ const test = {
             ]
         }
     ]
-}
+};
 
-console.log(pathtree.logTree(test));
-pathtree.buildTree("I:\\Документация") // "I:\\Документация\\Legion"
-.then(folder => console.log(pathtree.logTree(folder)))
-.catch(error => console.log(error));
+console.log(logtree.logTree(test));
