@@ -2,7 +2,7 @@ const tree = require('./tree');
 const logtree = require('./logtree');
 
 const argv = require('yargs')
-    .usage('View folder structure.\nUsage: $0')
+    .usage('Структура каталога.\nИспользование: $0')
     .options({
         path : {
             demand : true,
