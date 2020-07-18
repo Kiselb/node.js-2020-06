@@ -6,7 +6,7 @@ const CHAR_SPACE = ' ';
 const CHAR_CR = '\n';
 const GLIPH_SIZE = 2;
 
-exports.logTree = function(tree, depth) {
+function logTree(tree, depth) {
     if (typeof tree !== "object") throw "Входной параметр tree должен быть объектом"; // Object.prototype.toString.call(tree) !== "[object Object]"
     if (!tree.name) throw "Недопустимая структура объекта";
     if (depth < 1) throw "Недопустимое значение параметра 'Глубина'";
@@ -26,3 +26,5 @@ function logItems(items, level, prefix, depth) {
         return '';
     }
 }
+
+export { logTree };

@@ -1,4 +1,4 @@
-const logtree = require('./logtree');
+import { logTree } from './logtree.mjs';
 
 const test = {
     "name": 1,
@@ -29,4 +29,4 @@ const test = {
     ]
 };
 
-console.log(logtree.logTree(test));
+console.log(logTree(test));

@@ -1,7 +1,7 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-exports.buildTree = function(path, stat) {
+function buildTree(path, stat) {
     return new Promise((resolve, reject) => {
         try {
             if (typeof stat != "object") throw "Не задан объект статистики";
@@ -49,3 +49,5 @@ function buildNode(parent, stat, childPath) {
         });
     })
 }
+
+export { buildTree };
