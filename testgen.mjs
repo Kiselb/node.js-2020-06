@@ -24,7 +24,7 @@ function addNode(items, depth, status) {
     return;
 }
 
-// https://learn.javascript.ru/task/random-int-min-max
+//https://learn.javascript.ru/task/random-int-min-max
 function randomInteger(min, max) {
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
