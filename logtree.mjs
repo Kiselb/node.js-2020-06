@@ -7,7 +7,7 @@ const CHAR_CR = '\n';
 const GLIPH_SIZE = 2;
 
 function logTree(tree, depth) {
-    if (typeof tree !== "object") throw "input parameter 'tree' must be an object"; // Object.prototype.toString.call(tree) !== "[object Object]"
+    if (typeof tree !== "object") throw "Input parameter 'tree' must be an object"; // Object.prototype.toString.call(tree) !== "[object Object]"
     if (!tree.name) throw "Invalid object structure";
     if (depth < 1) throw "Invalid value of parameter 'depth'";
     return (tree.name + CHAR_CR + logItems(tree.items, 1, '', depth));
