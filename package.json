@@ -22,6 +22,5 @@
   "homepage": "https://github.com/Kiselb/node.js-2020-06#readme",
   "dependencies": {
     "yargs": "^15.4.0"
-  },
-  "type": "module"
+  }
 }

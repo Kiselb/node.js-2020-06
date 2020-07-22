@@ -1,10 +1,8 @@
-import { buildTree } from './tree.mjs';
-import { logTree } from './logtree.mjs';
+const tree = require('./tree.js');
+const logtree = require('./logtree.js');
 
-//const argv = require('yargs')
-import pkg from 'yargs';
-const { argv } = pkg;
-argv.usage('Структура каталога.\nИспользование: $0')
+const argv = require('yargs')
+    .usage('Структура каталога.\nИспользование: $0')
     .options({
         path : {
             demand : true,
@@ -22,6 +20,6 @@ argv.usage('Структура каталога.\nИспользование: $0
 
 const stat = {};
 
-buildTree(argv.path, stat)
-.then(folder => { console.log(logTree(folder, argv.depth)); console.log(`${stat.dirs} directories, ${stat.files} files\n`); })
+tree.buildTree(argv.path, stat)
+.then(folder => { console.log(logtree.logTree(folder, argv.depth)); console.log(`${stat.dirs} directories, ${stat.files} files\n`); })
 .catch(error => console.log(error));

@@ -1,6 +1,6 @@
-import { getTestObject } from './testgen.mjs';
-import { logTree } from './logtree.mjs';
+const testgen = require('./testgen.js');
+const logtree = require( './logtree.js');
 
 
-const test = getTestObject(8, 20);
-console.log(logTree(test, 100));
+const test = testgen.getTestObject(8, 20);
+console.log(logtree.logTree(test, 100));

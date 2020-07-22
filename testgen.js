@@ -1,4 +1,4 @@
-function getTestObject(depth, limit) {
+exports.getTestObject = function(depth, limit) {
     const test = { name: "0", items: [] };
     const status = { index: 0, limit: limit || randomInteger(10, 50) };
     while(!!status.limit) {
@@ -29,5 +29,3 @@ function randomInteger(min, max) {
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
 }
-
-export { getTestObject };
