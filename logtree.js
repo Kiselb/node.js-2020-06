@@ -4,12 +4,20 @@ const CHAR_RT = '\u2523';
 const CHAR_SL = '\u2517';
 const CHAR_SPACE = ' ';
 const CHAR_CR = '\n';
+
+exports.CHAR_VL = CHAR_VL;
+exports.CHAR_HL = CHAR_HL;
+exports.CHAR_RT = CHAR_RT;
+exports.CHAR_SL = CHAR_SL;
+exports.CHAR_SPACE = CHAR_SPACE;
+exports.CHAR_CR = CHAR_CR;
+
 const GLIPH_SIZE = 2;
 
 exports.logTree = function(tree, depth) {
-    if (typeof tree !== "object") throw "Input parameter 'tree' must be an object"; // Object.prototype.toString.call(tree) !== "[object Object]"
-    if (!tree.name) throw "Invalid object structure";
-    if (depth < 1) throw "Invalid value of parameter 'depth'";
+    if (typeof tree !== "object")  throw new Error("Input parameter 'tree' must be an object"); // Object.prototype.toString.call(tree) !== "[object Object]"
+    if (!tree.name) throw new Error("Invalid object structure");
+    if (depth < 1) throw new Error("Invalid value of parameter 'depth'");
     return (tree.name + CHAR_CR + logItems(tree.items, 1, '', depth));
 }
 
