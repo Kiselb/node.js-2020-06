@@ -116,7 +116,7 @@ async function sortFileChunks(files, bigFileFullName) {
 
     for(let i = 0; i < files.length; i++) {
         handlers.push({ stream: fs.createReadStream(files[i]), chunk: null, value: null, chunkIndex: 0, treated: false });
-        await events.once(handlers[handlers.length - 1].stream, 'readable')
+        // await events.once(handlers[handlers.length - 1].stream, 'readable')
         handlers[i].chunk = handlers[handlers.length - 1].stream.read();
         handlers[i].chunkIndex = 0;
         handlers[i].value = +(handlers[i].chunk.subarray(handlers[i].chunkIndex, handlers[i].chunk.indexOf(10)).toString())
